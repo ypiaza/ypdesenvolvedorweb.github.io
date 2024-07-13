@@ -1,0 +1,312 @@
+body{
+    background-color: var(--cor-principal);
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "skills skills skills skills"
+                         "projects projects projects projects"
+                         "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*header*/
+.header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    padding: 15px 25px;
+}
+
+.header .logo h1{
+    font-weight: 800;
+}
+
+.header .logo span{
+    color: rgb(0, 200, 250);
+    font-weight: 800;
+}
+
+.header .logo span:last-child{
+    color: #242424;
+    font-weight: 800;
+}
+
+.btn{
+    padding: 15px;
+    background-color: rgb(0, 200, 250);
+    color: var(--cor-principal);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(0, 200, 250, 0.3);
+    transition: 0.2s ease;
+}
+
+.btn:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 5px rgb(0, 200, 250, 0.3);
+}
+
+.btn-contact{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 15px;
+    background-color: rgb(0, 200, 250);
+    color: var(--cor-principal);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid rgb(250, 250, 250, 0.5);
+    box-shadow: 0 0 10px rgb(0, 200, 250, 0.3);
+    z-index: 1000;
+}
+
+
+/*hero*/
+
+/*efeitos visuais*/
+.hero .ball{
+    position: absolute;
+    bottom: 170px;
+    left: 350px;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgb(0, 200, 250);
+    box-shadow: 0 0 20px rgb(0, 200, 250, 0.5);
+    opacity: 50;
+    z-index: -100;
+    animation: life 12s linear infinite alternate;
+}
+
+.hero .ball:nth-child(2){
+    position: absolute;
+    bottom: 70px;
+    left: 190px;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: var(--cor-principal-dark);
+    box-shadow: 0 0 20px rgb(24, 24, 24, 0.5);
+    opacity: 50;
+    z-index: -150;
+    animation: life 6s linear infinite alternate;
+}
+
+.hero .ball:nth-child(3){
+    position: absolute;
+    bottom: 350px;
+    left: 650px;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 255, 255, 0.5);
+    opacity: 50;
+    z-index: -150;
+    animation: life 8s linear infinite alternate;
+}
+
+.hero .ball:nth-child(4){
+    position: absolute;
+    bottom: 150px;
+    left: 980px;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: rgb(0, 210, 250);
+    box-shadow: 0 0 20px rgb(0, 200, 250, 0.5);
+    opacity: 50;
+    z-index: -100;
+    animation: life 6s linear infinite alternate;
+}
+
+@keyframes life{
+    50%{
+        transform: translateX(20px);
+    }
+    75%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateX(-20px);
+    }
+}
+
+
+.hero{
+    grid-area: hero;
+    height: 89vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero .about{
+    margin-right: 5rem;
+    background-color: rgb(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border: 1px solid rgb(250, 250, 250, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgb(24, 24, 24, 0.1);
+}
+
+.hero .about h2{
+    color: var(--black-font-color);
+    font-weight: 900;
+}
+
+.hero .about span{
+    font-weight: 1000;
+    color: rgb(0, 200, 250);
+}
+
+.hero .about p{
+    margin: 2rem auto;
+    color: var(--black-font-color);
+    font-weight: 350;
+}
+
+/*skills*/
+.skills{
+    grid-area: skills;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skills .skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-principal);
+    background-color: var(--color-tema);
+    padding: 1rem;
+    margin: 5rem;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(0, 200, 250, 0.5);
+}
+
+/*projects*/
+
+.projects{
+    grid-area: projects;
+    position: relative;
+}
+
+.projects .ball:nth-child(1){
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgb(0, 200, 250);
+    box-shadow: 0 0 20px rgb(0, 200, 250, 0.5);
+    opacity: 50;
+    z-index: -100;
+    animation: life 12s linear infinite alternate;
+}
+
+.projects .ball:nth-child(2){
+    position: absolute;
+    bottom: 5%;
+    right: 60%;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: var(--cor-principal-dark);
+    box-shadow: 0 0 20px rgb(24, 24, 24, 0.5);
+    opacity: 50;
+    z-index: -150;
+    animation: life 3s linear infinite alternate;
+}
+
+.projects .ball:nth-child(3){
+    position: absolute;
+    bottom: 50%;
+    left: 65%;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 255, 255, 0.5);
+    opacity: 50;
+    z-index: -150;
+    animation: life 8s linear infinite alternate;
+}
+
+.projects .ball:nth-child(4){
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: rgb(0, 210, 250);
+    box-shadow: 0 0 20px rgb(0, 200, 250, 0.5);
+    opacity: 50;
+    z-index: -100;
+    animation: life 6s linear infinite alternate;
+}
+
+.projects .ball:nth-child(5){
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: rgb(0, 210, 250);
+    box-shadow: 0 0 20px rgb(0, 200, 250, 0.5);
+    opacity: 50;
+    z-index: -100;
+    animation: life 6s linear infinite alternate;
+}
+
+.projects .area-projects{ 
+    height: 155vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10rem;
+}
+
+.projects .area-projects .item{
+    background-color: rgb(250, 250, 250, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgb(24, 24, 24, 0.1);
+    margin: 2rem;
+    border-radius: 20px;
+}
+
+
+/*footer*/
+.footer{
+    grid-area: footer;
+    height: 7vh;
+    background-color: var(--color-tema);
+    margin: 1.75rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 200, 250, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer p{
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.5rem;
+}
+
+.footer span{
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: var(--cor-principal);
+}
