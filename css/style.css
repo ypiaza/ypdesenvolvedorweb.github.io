@@ -63,7 +63,7 @@ body{
     cursor: pointer;
     background: linear-gradient(45deg, #242424, #424242);
     border-radius: 10px;
-    border: 1px solid rgb(245, 245, 245, 0.5);
+    border: 1px solid rgb(36, 36, 36, 0.2);
     transition: all 0.5s ease;
 }
 
@@ -74,7 +74,7 @@ body{
     margin-bottom: 2rem;
     background-size: cover;
     border-radius: 50%;
-    border: 2px solid rgb(245, 245, 245, 0.5);
+    border: 2 px solid rgb(245, 245, 245, 0.9);
 }
 
 .hero .perfil .presentation{
@@ -85,6 +85,11 @@ body{
 .hero .perfil .presentation h4{
     font-weight: 700;
 
+}
+
+.hero .perfil .skill{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .hero .perfil .skill svg{
@@ -112,42 +117,34 @@ body{
     }
 }
 /*projects*/
-
 .projects{
     grid-area: projects;
-    position: relative;
-}
-
-.projects .area-projects{ 
-    height: 89vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-}
-
-.projects .area-projects .item{
-    background-color: var(--cor-principal);
-    box-shadow: 0 0 30px rgb(24, 24, 24, 0.1);
-    margin: 2rem;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.5s;
+    justify-content: center;
+    gap: 1rem;
     padding: 1rem;
 }
 
-.projects .area-projects .item h4{
-    font-weight: 600;
+.projects .item{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    justify-content: center;
+    gap: 1rem;
+    background: linear-gradient(45deg, #242424, #424242);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgb(36, 36, 36, 0.2);
 }
 
-.projects .area-projects .item img{
-    border: 1px solid rgb(250, 250, 250, 0.5);
+.projects .item .img img{
+    background-size: cover;
+    border: 2 px solid rgb(245, 245, 245, 0.9);
     border-radius: 10px;
 }
-
-.projects .area-projects .item:hover{
-    transform: scale(1.1);
-}
-
 
 /*footer*/
 .footer{
