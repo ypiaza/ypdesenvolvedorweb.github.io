@@ -15,7 +15,7 @@
 
 /* Estiliza o polegar da barra de rolagem (a parte que se move) */
 ::-webkit-scrollbar-thumb {
-    background: var(--cor-principal-dark); 
+    background: var(--cor-principal); 
     border-radius: 10px;
 }
 
