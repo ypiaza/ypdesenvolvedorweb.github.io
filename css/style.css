@@ -3,6 +3,7 @@ body{
     display: grid;
     grid-template-areas: "header header header header"
                          "hero hero hero hero"
+                         "services services services services"
                          "projects projects projects projects"
                          "footer footer footer footer";
     grid-template-columns: repeat(4, 1fr);
@@ -18,6 +19,7 @@ body{
 }
 
 .header .logo h1{
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--cor-principal);
 }
@@ -51,7 +53,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1000;
+    perspective: 1000px;
 }
 
 .hero .perfil{
@@ -67,7 +69,7 @@ body{
     border: 1px solid rgb(36, 36, 36, 0.2);
     box-shadow: 0 0 200px rgb(245, 245, 245, 0.5);
     transform-style: preserve-3d;
-    animation: card 5s linear infinite alternate;
+    animation: card 20s linear infinite alternate;
 }
 
 .hero .perfil .eu{
@@ -120,13 +122,27 @@ body{
     0%{
         transform: rotateX(5deg) rotateY(-10deg) rotateZ(-5deg);
     }
+    25%{
+        transform: rotateZ(5deg);
+    }
     50%{
         transform: rotateX(-5deg) rotateY(10deg);
     }
+    75%{
+        transform: rotateZ(-5deg);
+    }
     100%{
-        transform: rotateZ(5deg);
+        transform: rotateX(-5deg) rotateY(10deg) rotateZ(5deg);
     }
 }
+
+/*services*/
+
+.services{
+    grid-area: services;
+    height: 89vh;
+}
+
 /*projects*/
 .projects{
     grid-area: projects;
