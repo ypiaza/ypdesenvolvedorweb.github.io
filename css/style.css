@@ -4,7 +4,6 @@ body{
     grid-template-areas: "header header header header"
                          "hero hero hero hero"
                          "services services services services"
-                         "projects projects projects projects"
                          "footer footer footer footer";
     grid-template-columns: repeat(4, 1fr);
 }
@@ -140,14 +139,14 @@ body{
 
 .services{
     grid-area: services;
-    height: 90vh;
+    height: 90%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     margin: 5rem;
     padding: 5rem;
-    gap: 2rem;
+    gap: 1rem;
     background: linear-gradient(45deg, #242424, #424242);
     border: 1px solid rgb(245, 245, 245, 0.1);
     border-radius: 20px;
@@ -158,12 +157,17 @@ body{
     display: flex;
     flex-direction: column;
     background: linear-gradient(45deg, #dbdbdb, #ffffff);
-    padding: 5rem;
+    height: 400px;
+    width: 100%;
+    padding: 50px;
     border: 1px solid rgb(245, 245, 245, 0.1);
     border-radius: 10px;
-    height: 80%;
 }
 
+.services .about h2{
+    font-weight: 600;
+    margin-bottom: 50px;
+}
 .services .container-service{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -191,7 +195,7 @@ body{
 }
 
 .services .container-service .img-service h2{
-    font-size: .65rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -228,59 +232,75 @@ body{
 }
 
 /*projects*/
-.projects{
-    grid-area: projects;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    padding: 5rem;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+
+.services .about-projects{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #242424, #424242);
+    height: 605px;
+    width: 100%;
+    padding: 50px;
+    border: 1px solid rgb(245, 245, 245, 0.1);
+    border-radius: 10px;
+    color: var(--cor-principal);
 }
 
-.projects .item{
+.services .about-projects h2{
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.services .projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.services .projects .item{
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 350px;
-    margin: 0 auto;
-    gap: 1rem;
-    background: linear-gradient(45deg, #242424, #424242);
-    backdrop-filter: blur(10px);
+    height: 300px;
+    background: linear-gradient(45deg, #dbdbdb, #ffffff);
+    color: var(--cor-principal-dark);
     border-radius: 10px;
     border: 1px solid rgb(36, 36, 36, 0.2);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
-.projects .item .img img{
+.services .projects .item .img img{
     background-size: cover;
-    border: 1px solid rgb(245, 245, 245, 0.9);
+    border: 1px solid rgb(0, 0, 0, 0.9);
     border-radius: 10px;
 }
 
-.projects .item .resume{
+.services .projects .item .resume{
     text-align: center;
-    color: var(--cor-principal);
+    color: var(--cor-principal-dark);
 }
 
-.projects .item .resume h3{
+.services .projects .item .resume h3{
     font-weight: 600;
     font-size: 1rem;
 }
 
-.projects .item .resume p{
+.services .projects .item .resume p{
     font-size: .75rem;
 }
 
-.projects .item:hover{
+.services .projects .item:hover{
     transform: translateZ(50px);
     box-shadow: 0 0 200px rgb(245, 245, 245, 0.5);
     z-index: 100;
 }
+
 
 /*footer*/
 .footer{
